@@ -20,9 +20,11 @@ from django.urls import path
 from django.urls import include, path
 from rest_framework.routers import DefaultRouter
 from myapi.views import MyModelViewSet
+from myapi.views import EmployeeViewSet
 
 router = DefaultRouter()
 router.register(r'mymodel', MyModelViewSet)
+router.register(r'employee', EmployeeViewSet)
 
 urlpatterns = [
      path('admin/', admin.site.urls),
